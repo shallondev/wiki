@@ -3,9 +3,16 @@
     font-family: Aria, sans-serif;
 }
 
+a {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+  }
+
 :root{
     --light-purple: hsla(270, 40%, 80%, 0.8);
     --dark-purple: hsl(270, 40%, 60%);
+    --darkest-purple: hsl(270, 40%, 40%);
 }
 /* End of General */
 
@@ -16,6 +23,10 @@
     padding: 20px;
 }
 
+.sidebar a:hover {
+    color: var(--dark-purple);
+}
+
 .sidebar h2 {
     margin-top: 5px;
     color: white;
@@ -23,14 +34,15 @@
 }
 
 .search {
-    width: 100%;
+    width: calc(100% - 24px); 
     font-size: 15px;
     line-height: 15px;
     background-color: #f8f8f8;
     border: 2px solid var(--dark-purple);
-    border-radius: 10%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    box-shadow: -15px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .search:focus {
     outline: none;
@@ -38,6 +50,11 @@
   }
   .search::placeholder{
     color: var(--dark-purple);
+  }
+
+  .sidebar-item{
+    color: white;
+    margin-top: 5px;
   }
 
 /* End of Sidebar */
@@ -54,14 +71,52 @@ code {
 h1 {
     margin-top: 0px;
     padding-top: 20px;
+    color: white;
 }
 
 textarea {
-    height: 90vh;
-    width: 80%;
+    height: 100vh;
+    width: calc(80% - 20px);
 }
 
 .main {
     padding: 10px;
 }
 
+ul li{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+ul li a:hover{
+    color: var(--darkest-purple);
+}
+
+.entry-content {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.error-message{
+    color: white;
+    font-size: 2rem;
+}
+
+.index-entry ul{
+    list-style: none;
+    margin-left: -15px;
+}
+
+.buttons {
+    background-color: var(--darkest-purple);
+    border: 1px solid var(--light-purple);
+}
+.buttons:hover {
+    background-color: var(--light-purple);
+    border: 1px solid var(--darkest-purple);
+}
+
+.forms {
+    color: white;
+}
